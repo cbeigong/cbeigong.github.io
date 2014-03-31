@@ -19,6 +19,44 @@
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
+			<br/><br/>
+<span id="songplay">挪威的森林，伍佰</span>
+<script type="text/javascript">
+<!--
+function play(name,artist,auto){
+	var qwert = '<div style="width:400px; height:77px; background:url([url]http://zzhie.sinaapp.com/code/img.gif[/url]) no-repeat;"><embed style="width:300px; height:48px; margin:0px; padding:0px; float:left;" src="http://box.baidu.com/widget/flash/mbsong.swf?name='+name+'&artist='+artist+'&autoPlay='+auto+'" width="310" height="51" allowscriptaccess="never" allownetworking="internal" type="application/x-shockwave-flash" /></div>';
+document.getElementById('songplay').innerHTML = qwert;
+}
+song = document.getElementById('songplay').innerHTML;
+if(typeof(song) !='undefined' && song !=''){
+	d = song.split('，');
+	var a = '';
+	if(d[2] ='undefined'){a = 'true';}
+	if(d[2] !='undefined'){a = 'false';}
+	play(d[0],d[1],a);
+}
+function playSong(songVal){
+	if(typeof(songVal) !='undefined' && songVal !=''){
+		var d = songVal.split('，');
+		var a = '';
+		if(d[2] ='undefined'){a = 'true';}
+		if(d[2] !='undefined'){a = 'false';}
+		play(d[0],d[1],a);
+	}	
+}
+var playBtn = document.getElementById("playGo");
+playBtn.onclick=function(){
+	playSong(document.getElementById("songInfo").value);
+}
+function SubmitKeyClick(obj, evt) {
+	evt = (evt) ? evt : ((window.event) ? window.event : "")
+	keyCode = evt.keyCode ? evt.keyCode : (evt.which ? evt.which : evt.charCode);
+	if (keyCode == 13) {
+		playSong(document.getElementById("songInfo").value);
+	}
+}
+-->
+</script>
 				<span class="comments">/**</span><br />
 				<span class="space"/><span class="comments">* We are both in this university until some day, I meet you .</span><br />
 				<span class="space"/><span class="comments">* we were seldom have a touch , however it won't hinder me to walk to you .</span><br />
