@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "start blog"
+title: "我的博客"
 description: ""
 category: 
 tags: [start]
